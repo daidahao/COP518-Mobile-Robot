@@ -1,2 +1,18 @@
 \chapter{Conclusions}
 \label{chap:discussion}
+
+% In this project we have successfully developed and tested two behaviours for our robot. 
+% The first one is Reactive behaviour, which we refer to Braitenberg’s four behaviours, ‘ Love’, ‘Curious’, ‘Aggression’, ‘Fear’. We made our robot able to act four different behaviour regarding to a targeted object, a backpack. The robot itself are able to wonder around the lab and looking for the backpack, after it gather the targeted object in its camera, it will execute the behaviour that we have assigned to it. 
+% We have designed a following behaviour to our robot as well, robot will firstly choose a human to follow, analysis that human’s details and then start to follow him in a desire distance, it will turn its direction as well. We also add interrupt function, which means even another person come in through the testing, even fully block the person that robot firstly chosen, robot will still be able to recognize the initial target and still follow that target.
+
+In this coursework, both Reactive Behaviours and Following Behaviours of mobile robot are designed and implemented.
+The robot with Reactive Behaviours mimics Braitenberg behaviors, more specifically love, aggression, fear and curiosity.
+The robot first wanders around the environment to locate the object of interest (backpack in this case). Once the object is located, a  Braitenberg behavior is performed by the robot.
+
+The robot with Following Behaviours keeps following the designated person on the scene while keeping a safe distance.
+The robot first wanders around the environment to locate the person of interest.
+Once the designated person is located, the robot moves toward the person while maintaining a safe distance.
+In the scenario of possible hijacking by another person, the robot distinguishes between the two persons and only follows the person with the highest similarity score.
+
+Testing procedures are proposed and performed on both tasks. The testing results show that our design and implementation is correct and robust.
+

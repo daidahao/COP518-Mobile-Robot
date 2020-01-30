@@ -106,4 +106,38 @@ Applying the bounding box of the person to the depth image, a matrix of depths i
 The distance between the person and the robot is simply the minimum non-zero value in the matrix.
 
 \section{Test \& Analysis}
+Two testing scenarios are performed and analyzed in this section.
+
+\subsection{Single Person Following}
+In this scenario, only one person is presented in the environment.
+The robot is expected to follow the person around the room.
+
+Figure \ref{fig:follow-test} shows an video capture of our testing scenario.
+As the person walks around in the room, the robot keeps following in a safe distance and never loses track of the person.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{follow-test}
+\caption{Testing of Single Person Following.}
+\label{fig:follow-test}
+\end{figure}
+
+\subsection{Single Person Following under Attempted Hijacking}
+In this scenario, two persons are presented in the environment. One person is chosen as the designated person to follow.
+The other person makes several attempts to hijack the robot by stepping in front of the designated person and then walking away.
+The robot is expected to always follow the designated person and not follow the other person.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{follow-test-hijack}
+\caption{Testing of Single Person Following under Attempted Hijacking.}
+\label{fig:follow-test-hijack}
+\end{figure}
+
+Figure \ref{fig:follow-test-hijack} shows an video capture of our testing scenario.
+The camera image is shown on the left, the bounding box the person in the center and the target image on the right.
+The robot distinguishes between two persons by computing the similarity score between the bounding box and the target image.
+
+As the designated person walks around in the room, the robot keeps following in a safe distance and never loses track of the person.
+The other person makes several attempts to hijack the robot. However, the robot distinguishes between the two persons and does not follow the other person.
 
